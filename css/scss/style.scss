@@ -1,0 +1,187 @@
+div {
+    border: 1px solid white;
+}
+
+.greyHeader {
+    background-color: yellow;
+    border: 1px solid white;
+    height: 50px;
+    nav{
+        background: red;
+        height: 10px;
+        ul {
+            li{
+                list-style: none;
+            }
+        }
+    }
+}
+
+.greyMainUn {
+    background-color: blue;
+    height: 50px;
+}
+
+.greyMainDeux {
+    background-color: pink;
+    height: 50px;
+}
+
+.greyMainAlone {
+    background-color: black;
+    height: 50px;
+}
+
+.greyMainTrois {
+    background-color: purple;
+    height: 50px;
+}
+
+.greyFooter {
+    background-color: orange;
+    height: 50px;
+}
+
+
+main {
+    #first{
+        display: grid;
+        grid-template-areas: "a a b c"
+        "a a d d"
+        "e e f f";
+
+        .greyMain1 {
+            grid-area: a;
+        }
+        .greyMain2{
+            grid-area : b;
+        }
+        .greyMain3 {
+            grid-area: c;
+        }
+        .greyMain4 {
+            grid-area: d;
+        }
+        .greyMain5 {
+            grid-area: e;
+        }
+        .greyMain6 {
+            grid-area: f;
+        }
+    }
+    #second {
+        display: grid;
+        grid-template-areas: "a b c d e";
+        .MainDeux1 {
+            grid-area: a;
+        }
+        .MainDeux2 {
+            grid-area: b;
+        }
+        .MainDeux3 {
+            grid-area: c;
+        }
+        .MainDeux4 {
+            grid-area: d;
+        }
+        .MainDeux5 {
+            grid-area: e;
+        }
+    }
+    #global {
+        display: grid;
+        grid-template-areas: "a b";
+        #third{
+            grid-area: a;
+        }
+        #fourth {
+            grid-area : b;
+            display: grid;
+            grid-template-areas: "a b c d"
+            "e f g h";
+            .MainTrois1 {
+                grid-area: a;
+            }
+            .MainTrois2 {
+                grid-area: b;
+            }
+            .MainTrois3 {
+                grid-area: c;
+            }
+            .MainTrois4 {
+                grid-area: d;
+            }
+            .MainTrois5 {
+                grid-area: e;
+            }
+            .MainTrois6 {
+                grid-area: f;
+            }
+            .MainTrois7 {
+                grid-area: g;
+            }
+            .MainTrois8 {
+                grid-area: h;
+            }
+        }
+    }
+    footer{
+        display: grid;
+        grid-template-areas:
+        "a a b b c c d d"
+        "e e e e e e e e"
+        "f f g g h h i i j j"
+        "k l m n o p q";
+        .greyFooter1 {
+            grid-area: a;
+        }
+        .greyFooter2 {
+            grid-area: b;
+        }
+        .greyFooter3 {
+            grid-area: c;
+        }
+        .greyFooter4 {
+            grid-area: d;
+        }
+        .greyFooter5 {
+            grid-area: e;
+        }
+        .greyFooter6 {
+            grid-area: f;
+        }
+        .greyFooter7 {
+            grid-area: g;
+        }
+        .greyFooter8 {
+            grid-area: h;
+        }
+        .greyFooter9 {
+            grid-area: i;
+        }
+        .greyFooter10 {
+            grid-area: j;
+        }
+        .greyFooter11 {
+            grid-area: k;
+        }
+        .greyFooter12 {
+            grid-area: l;
+        }
+        .greyFooter13 {
+            grid-area: m;
+        }
+        .greyFooter14 {
+            grid-area: n;
+        }
+        .greyFooter15 {
+            grid-area: o;
+        }
+        .greyFooter16 {
+            grid-area: p;
+        }
+        .greyFooter17 {
+            grid-area: q;
+        }
+    }
+}
