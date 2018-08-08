@@ -1,16 +1,24 @@
+body {
+    width: 70%;
+
+}
+
 div {
     border: 1px solid white;
 }
+
 #right {
     right: 0;
 }
+
 body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+
     span {
         background-color: red;
         grid-column: 1 / 2;
-        grid-row-start: 1 ;
+        grid-row-start: 1;
         grid-row-end: 4;
 
         ul {
@@ -21,87 +29,143 @@ body {
         }
     }
 }
-header{
+
+header {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-column: 2 / 8;
-    grid-row-start: 1 ;
+    grid-row-start: 1;
     grid-row-end: 1;
 
     .gH2 {
         background-color: yellow;
         display: grid;
         grid-column: 1 / 7;
-        grid-row-start: 2 ;
+        grid-row-start: 2;
         grid-row-end: 4;
-
-
     }
-    .gH3{
+
+    .gH3 {
         background-color: pink;
         display: grid;
-        grid-column: 2 /span  7;
+        grid-column: 2 /span 7;
         grid-row: 2;
-
     }
-    .nav{
+
+    .nav {
         background-color: orange;
         display: grid;
         grid-column: 2 / span 7;
         grid-row: 3;
+
         ul {
             display: grid;
-        li{
-            list-style: none;
-        }
 
+            li {
+                list-style: none;
+            }
+        }
     }
-    }
-    .gH4{
+
+    .gH4 {
         background-color: purple;
         display: grid;
         grid-column: 1 / span 7;
         grid-row: 4;
-
     }
 }
 
 main {
     grid-column: 2 / 8;
-    grid-row-start: 2 ;
+    grid-row-start: 2;
     grid-row-end: 2;
+
     #first {
         display: grid;
         grid-template-areas: "a a b c" "a a d d" "e e f f";
-
         .greyMain1 {
             grid-area: a;
-            background-color: green;
+
+            margin: 0.5rem;
+            border: 1px solid black;
         }
 
         .greyMain2 {
             grid-area: b;
-            background-color: black;
+
+            margin: 0.5rem;
+            border: 1px solid black;
         }
 
         .greyMain3 {
             grid-area: c;
-            background-color: red;
+
+            margin: 0.5rem;
+            border: 1px solid black;
         }
 
-        .greyMain4 {
-            grid-area: d;
-            background-color: magenta;
+
+            .greyMain4 {
+                grid-area: d;
+
+                display: grid;
+                grid-template-areas: "a b";
+                border: 1px solid black;
+                margin: 0.5rem;
+                #oops {
+                    width: 90%;
+                    grid-area: a;
+                    img{
+                        display:flex;
+                        float: left;
+
+                    }
+            }
+            #wouhou {
+                grid-area: b;
+            }
         }
 
         .greyMain5 {
             grid-area: e;
-            background-color: lightgreen;
+
+            display: grid;
+            grid-template-areas: "a b";
+            margin: 0.5rem;
+            border: 1px solid black;
+            #ahah {
+                grid-area: a;
+                width: 100%;
+                img{
+                    display:flex;
+                    float: left;
+                }
+            }
+
+            #ohoh {
+                grid-area: b;
+            }
         }
 
-        .greyMain6 {
-            grid-area: f;
-            background-color: brown;
+
+            .greyMain6 {
+                grid-area: f;
+
+                display: grid;
+                grid-template-areas: "a b";
+                border: 1px solid black;
+                margin: 0.5rem;
+                #aiedit {
+                    grid-area: a;
+                    width: 90%;
+                    img{
+                        display:flex;
+                        float: left;
+                    }
+            }
+            #id {
+                grid-area: b;
+            }
         }
     }
 
@@ -141,7 +205,10 @@ main {
 
         #third {
             grid-area: a;
-            background-color: yellow;
+            
+            .greyMainAlone {
+                margin-right: 1rem;
+            }
         }
 
         #fourth {
@@ -149,53 +216,49 @@ main {
             display: grid;
             grid-template-areas: "a b c d" "e f g h";
 
+
             .MainTrois1 {
                 grid-area: a;
-                background-color: pink;
+
             }
 
             .MainTrois2 {
                 grid-area: b;
-                background-color: green;
+
             }
 
             .MainTrois3 {
                 grid-area: c;
-                background-color: red;
+
             }
 
             .MainTrois4 {
                 grid-area: d;
-                background-color: blue;
             }
 
             .MainTrois5 {
                 grid-area: e;
-                background-color: brown;
             }
 
             .MainTrois6 {
                 grid-area: f;
-                background-color: black;
             }
 
             .MainTrois7 {
                 grid-area: g;
-                background-color: darkblue;
             }
 
             .MainTrois8 {
                 grid-area: h;
-                background-color: lightpink;
             }
         }
     }
-
 }
+
 footer {
     display: grid;
     grid-column: 2 / 8;
-    grid-row-start: 3 ;
+    grid-row-start: 3;
     grid-row-end: 3;
 
     #gf1 {
@@ -221,4 +284,9 @@ footer {
         grid-template-columns: repeat(8, 1fr);
         background-color: purple;
     }
+}
+
+img {
+    min-width: 100%;
+    max-width: 100%;
 }
