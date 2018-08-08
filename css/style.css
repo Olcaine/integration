@@ -5,16 +5,23 @@ div {
   right: 0; }
 
 body {
-  display: grid; }
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); }
   body span {
-    background-color: red; }
+    background-color: red;
+    grid-column: 1 / 2;
+    grid-row-start: 1;
+    grid-row-end: 4; }
     body span ul li {
       color: white;
       list-style: none; }
 
 header {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); }
+  grid-template-columns: repeat(7, 1fr);
+  grid-column: 2 / 8;
+  grid-row-start: 1;
+  grid-row-end: 1; }
   header .gH2 {
     background-color: yellow;
     display: grid;
@@ -34,107 +41,96 @@ header {
     header .nav ul {
       display: grid; }
       header .nav ul li {
-        list-style: none;
-        display: inline-block;
-        display: grid;
-        grid-template-areas: "a a" "b b" "c c" "d d" ". e"; }
-      header .nav ul #un {
-        background-color: lightgreen;
-        grid-area: a; }
-      header .nav ul #deux {
-        background-color: lightblue;
-        grid-area: b; }
-      header .nav ul #trois {
-        background-color: orange;
-        grid-area: c; }
-      header .nav ul #quatre {
-        background-color: purple;
-        grid-area: d; }
-      header .nav ul #icone {
-        background-color: lightgrey;
-        grid-area: e; }
+        list-style: none; }
   header .gH4 {
     background-color: purple;
     display: grid;
     grid-column: 1 / span 7;
     grid-row: 4; }
 
-main #first {
-  display: grid;
-  grid-template-areas: "a a b c" "a a d d" "e e f f"; }
-  main #first .greyMain1 {
-    grid-area: a;
-    background-color: green; }
-  main #first .greyMain2 {
-    grid-area: b;
-    background-color: black; }
-  main #first .greyMain3 {
-    grid-area: c;
-    background-color: red; }
-  main #first .greyMain4 {
-    grid-area: d;
-    background-color: magenta; }
-  main #first .greyMain5 {
-    grid-area: e;
-    background-color: lightgreen; }
-  main #first .greyMain6 {
-    grid-area: f;
-    background-color: brown; }
-main #second {
-  display: grid;
-  grid-template-areas: "a b c d e"; }
-  main #second .MainDeux1 {
-    grid-area: a;
-    background-color: lightgrey; }
-  main #second .MainDeux2 {
-    grid-area: b;
-    background-color: darkred; }
-  main #second .MainDeux3 {
-    grid-area: c;
-    background-color: darkgreen; }
-  main #second .MainDeux4 {
-    grid-area: d;
-    background-color: darkblue; }
-  main #second .MainDeux5 {
-    grid-area: e;
-    background-color: darkorange; }
-main #global {
-  display: grid;
-  grid-template-areas: "a b"; }
-  main #global #third {
-    grid-area: a;
-    background-color: yellow; }
-  main #global #fourth {
-    grid-area: b;
+main {
+  grid-column: 2 / 8;
+  grid-row-start: 2;
+  grid-row-end: 2; }
+  main #first {
     display: grid;
-    grid-template-areas: "a b c d" "e f g h"; }
-    main #global #fourth .MainTrois1 {
+    grid-template-areas: "a a b c" "a a d d" "e e f f"; }
+    main #first .greyMain1 {
       grid-area: a;
-      background-color: pink; }
-    main #global #fourth .MainTrois2 {
-      grid-area: b;
       background-color: green; }
-    main #global #fourth .MainTrois3 {
+    main #first .greyMain2 {
+      grid-area: b;
+      background-color: black; }
+    main #first .greyMain3 {
       grid-area: c;
       background-color: red; }
-    main #global #fourth .MainTrois4 {
+    main #first .greyMain4 {
       grid-area: d;
-      background-color: blue; }
-    main #global #fourth .MainTrois5 {
+      background-color: magenta; }
+    main #first .greyMain5 {
       grid-area: e;
-      background-color: brown; }
-    main #global #fourth .MainTrois6 {
+      background-color: lightgreen; }
+    main #first .greyMain6 {
       grid-area: f;
-      background-color: black; }
-    main #global #fourth .MainTrois7 {
-      grid-area: g;
+      background-color: brown; }
+  main #second {
+    display: grid;
+    grid-template-areas: "a b c d e"; }
+    main #second .MainDeux1 {
+      grid-area: a;
+      background-color: lightgrey; }
+    main #second .MainDeux2 {
+      grid-area: b;
+      background-color: darkred; }
+    main #second .MainDeux3 {
+      grid-area: c;
+      background-color: darkgreen; }
+    main #second .MainDeux4 {
+      grid-area: d;
       background-color: darkblue; }
-    main #global #fourth .MainTrois8 {
-      grid-area: h;
-      background-color: lightpink; }
+    main #second .MainDeux5 {
+      grid-area: e;
+      background-color: darkorange; }
+  main #global {
+    display: grid;
+    grid-template-areas: "a b"; }
+    main #global #third {
+      grid-area: a;
+      background-color: yellow; }
+    main #global #fourth {
+      grid-area: b;
+      display: grid;
+      grid-template-areas: "a b c d" "e f g h"; }
+      main #global #fourth .MainTrois1 {
+        grid-area: a;
+        background-color: pink; }
+      main #global #fourth .MainTrois2 {
+        grid-area: b;
+        background-color: green; }
+      main #global #fourth .MainTrois3 {
+        grid-area: c;
+        background-color: red; }
+      main #global #fourth .MainTrois4 {
+        grid-area: d;
+        background-color: blue; }
+      main #global #fourth .MainTrois5 {
+        grid-area: e;
+        background-color: brown; }
+      main #global #fourth .MainTrois6 {
+        grid-area: f;
+        background-color: black; }
+      main #global #fourth .MainTrois7 {
+        grid-area: g;
+        background-color: darkblue; }
+      main #global #fourth .MainTrois8 {
+        grid-area: h;
+        background-color: lightpink; }
 
 footer {
-  display: grid; }
+  display: grid;
+  grid-column: 2 / 8;
+  grid-row-start: 3;
+  grid-row-end: 3; }
   footer #gf1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
